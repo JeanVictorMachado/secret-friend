@@ -1,4 +1,5 @@
 import {
+  act,
   fireEvent,
   renderWithRecoil,
   screen,
@@ -60,5 +61,33 @@ describe("Prize draw page", () => {
     const secretFriend = screen.getByRole("alert");
 
     expect(secretFriend).toBeInTheDocument();
+  });
+
+  it("Name drawn disappears after a defined time", () => {
+    jest.useFakeTimers();
+
+    renderWithRecoil(<PrizeDraw />);
+
+    const select = screen.getByPlaceholderText("Selecione o seu nome");
+
+    fireEvent.change(select, {
+      target: {
+        value: participantsList[0],
+      },
+    });
+
+    const button = screen.getByRole("button");
+
+    fireEvent.click(button);
+
+    let alert = screen.queryByRole("alert");
+    expect(alert).toBeInTheDocument();
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    alert = screen.queryByRole("alert");
+    expect(alert).not.toBeInTheDocument();
   });
 });

@@ -18,6 +18,10 @@ export const PrizeDraw = () => {
 
     if (prizeDrawResult.has(participantInTheTime)) {
       setSecretFriend(prizeDrawResult.get(participantInTheTime)!);
+
+      setTimeout(() => {
+        setSecretFriend("");
+      }, 5000);
     }
   };
 
