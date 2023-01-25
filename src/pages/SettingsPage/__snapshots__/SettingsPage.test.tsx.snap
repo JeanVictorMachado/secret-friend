@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings Page The page must be render correctly 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe fCbXqd"
+  >
+    <section>
+      <h2>
+        Vamos começar!
+      </h2>
+      <form>
+        <div
+          class="sc-hLBbgP fhqSRt"
+        >
+          <input
+            placeholder="Insira os nomes dos participantes"
+            type="text"
+            value=""
+          />
+          <button
+            disabled=""
+          >
+            Adicionar
+          </button>
+        </div>
+        
+      </form>
+      <ul
+        class="sc-jSUZER"
+      />
+      <footer
+        class="sc-gswNZR kBhDsb"
+      >
+        <button
+          class="sc-dkrFOg gxloLz"
+          disabled=""
+        >
+          Iniciar brincadeira
+        </button>
+        <img
+          alt="Sacolas de compras"
+          src="/images/sacolas.png"
+        />
+      </footer>
+    </section>
+  </div>
+</div>
+`;
